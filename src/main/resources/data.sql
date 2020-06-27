@@ -1,9 +1,9 @@
 --  Auto-generated SQL script #202006251623
-INSERT INTO Java.roles (name)
+INSERT INTO etedemoschema.roles (name)
 	VALUES ('ROLE_ADMINISTRATIVE_STAFF');
-INSERT INTO Java.roles (name)
+INSERT INTO etedemoschema.roles (name)
 	VALUES ('ROLE_PROFESSIONAL_STAFF');
-INSERT INTO Java.roles (name)
+INSERT INTO etedemoschema.roles (name)
 	VALUES ('ROLE_ADMIN');
-INSERT INTO Java.roles (name)
+INSERT INTO etedemoschema.roles (name)
 	VALUES ('ROLE_MANAGER');
