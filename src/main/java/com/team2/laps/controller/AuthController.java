@@ -2,7 +2,7 @@ package com.team2.laps.controller;
 
 import java.net.URI;
 import java.util.Collections;
-
+import javax.annotation.security.RolesAllowed;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,6 +55,7 @@ public class AuthController {
         }
         
         @PostMapping("/signin")
+        @RolesAllowed("ROLE_ADMIN")
         public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
                 Authentication authentication = authenticationManager
                                 .authenticate(new UsernamePasswordAuthenticationToken(loginRequest.getUsernameOrEmail(),

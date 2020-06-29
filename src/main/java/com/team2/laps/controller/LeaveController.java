@@ -39,6 +39,7 @@ public class LeaveController {
     }
 
     // FIXME: validate start date and end date
+    //TODO: test validation
     @PostMapping
     @RolesAllowed({ "ROLE_ADMINISTRATIVE_STAFF", "ROLE_PROFESSIONAL_STAFF", "ROLE_MANAGER" })
     public ResponseEntity<?> createOrUpdateLeave(@Valid @RequestBody Leave leave) {
