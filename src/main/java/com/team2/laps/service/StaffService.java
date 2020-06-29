@@ -1,19 +1,12 @@
 package com.team2.laps.service;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
-import com.team2.laps.model.Leave;
-import com.team2.laps.model.TimePeriod;
 import com.team2.laps.model.User;
 import com.team2.laps.repository.LeaveRepository;
 import com.team2.laps.repository.UserRepository;
@@ -39,5 +32,13 @@ public class StaffService {
 	
 	public ArrayList<String> findAllStaffNames() {
 		return userRepository.findAllStaffNames();
+	}
+	
+	public User findStaffById(Long userId) {
+		return userRepository.findById(userId).get();
+	}
+	
+	public User findStaffByName(String name) {
+		return userRepository.findByName(name).get();
 	}
 }
